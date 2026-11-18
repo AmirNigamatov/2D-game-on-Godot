@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://501plbdb24gs"]
+
+[ext_resource type="PackedScene" uid="uid://p1olyjexc7hw" path="res://Objects/Crab.tscn" id="1_a4mgr"]
+[ext_resource type="PackedScene" uid="uid://gnjswktaupeq" path="res://Objects/Door.tscn" id="2_d4b1u"]
+
+[node name="StartRoom" type="Node2D" unique_id=2090143855]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=123803867]
+offset_right = 800.0
+offset_bottom = 600.0
+color = Color(0.09019608, 0.79607844, 1, 1)
+
+[node name="Crab" parent="." unique_id=1004257139 instance=ExtResource("1_a4mgr")]
+
+[node name="Door" parent="." unique_id=641201652 instance=ExtResource("2_d4b1u")]
+position = Vector2(760, 300)
+nextScenePath = "res://Scenes/TrainingRoom.tscn"
+X = 120
+Y = 300

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://uwlioj763e0k"]
+
+[ext_resource type="PackedScene" uid="uid://p1olyjexc7hw" path="res://Objects/Crab.tscn" id="1_2xv5v"]
+[ext_resource type="PackedScene" uid="uid://gnjswktaupeq" path="res://Objects/Door.tscn" id="2_wedqc"]
+[ext_resource type="PackedScene" uid="uid://dplphitvwaaph" path="res://Objects/Dummy.tscn" id="3_045tt"]
+
+[node name="TrainingRoom" type="Node2D" unique_id=1809398165]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=274756718]
+offset_right = 800.0
+offset_bottom = 600.0
+color = Color(0.21176471, 1, 1, 1)
+
+[node name="Door" parent="." unique_id=641201652 instance=ExtResource("2_wedqc")]
+position = Vector2(40, 300)
+nextScenePath = "res://Scenes/StartRoom.tscn"
+X = 680
+Y = 300
+
+[node name="Door2" parent="." unique_id=568333670 instance=ExtResource("2_wedqc")]
+position = Vector2(760, 300)
+nextScenePath = "res://Scenes/BossRoom.tscn"
+X = 120
+Y = 300
+
+[node name="Dummy" parent="." unique_id=707132210 instance=ExtResource("3_045tt")]
+position = Vector2(400, 300)
+
+[node name="Crab" parent="." unique_id=1004257139 instance=ExtResource("1_2xv5v")]

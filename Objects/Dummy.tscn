@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dplphitvwaaph"]
+
+[ext_resource type="Script" uid="uid://b3jot2r4xdbs1" path="res://Scripts/Dummy.cs" id="1_genx3"]
+[ext_resource type="Texture2D" uid="uid://c6ihd7gaj1df4" path="res://Sprites/Манекен.jpg" id="1_s2l5p"]
+[ext_resource type="Texture2D" uid="uid://il5broujvg5p" path="res://Sprites/Развалины.jpg" id="2_7go7v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6cq"]
+size = Vector2(50, 50)
+
+[node name="Dummy" type="StaticBody2D" unique_id=707132210]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_genx3")
+
+[node name="Normal" type="Sprite2D" parent="." unique_id=2012653886]
+texture = ExtResource("1_s2l5p")
+
+[node name="Broken" type="Sprite2D" parent="." unique_id=1056940975]
+texture = ExtResource("2_7go7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=90098524]
+shape = SubResource("RectangleShape2D_bv6cq")

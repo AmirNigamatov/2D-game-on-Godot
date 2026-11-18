@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://p1olyjexc7hw"]
+
+[ext_resource type="Script" uid="uid://46bu1yepnf3" path="res://Scripts/Crab.cs" id="1_frdku"]
+[ext_resource type="Texture2D" uid="uid://baymwgrn2tau0" path="res://Sprites/Crab.png" id="1_ouv02"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6cq"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75obe"]
+size = Vector2(25, 50)
+
+[node name="Crab" type="CharacterBody2D" unique_id=1004257139]
+collision_layer = 2
+script = ExtResource("1_frdku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1137511843]
+shape = SubResource("RectangleShape2D_bv6cq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1216826827]
+texture = ExtResource("1_ouv02")
+
+[node name="Attack" type="Node2D" parent="." unique_id=848195479]
+position = Vector2(25, 0)
+
+[node name="Area2D" type="Area2D" parent="Attack" unique_id=1459041865]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack/Area2D" unique_id=216268329]
+position = Vector2(12.5, 0)
+shape = SubResource("RectangleShape2D_75obe")
+
+[node name="ColorRect" type="ColorRect" parent="Attack/Area2D" unique_id=1409788140]
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(1, 0.043137256, 0.043137256, 1)

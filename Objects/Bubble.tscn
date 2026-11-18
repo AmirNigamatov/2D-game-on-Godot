@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ucb4ui2w8k34"]
+
+[ext_resource type="Texture2D" uid="uid://3s7jug81kdld" path="res://Sprites/Bubble.jpg" id="1_sfohx"]
+[ext_resource type="Script" uid="uid://r6nvw6y57woo" path="res://Scripts/Bubble.cs" id="1_sq03s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6cq"]
+size = Vector2(10, 10)
+
+[node name="Bubble" type="Area2D" unique_id=1956660303]
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_sq03s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=265867589]
+texture = ExtResource("1_sfohx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=595255266]
+shape = SubResource("RectangleShape2D_bv6cq")

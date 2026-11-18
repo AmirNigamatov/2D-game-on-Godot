@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://6nv4rqny6gby"]
+
+[ext_resource type="Script" uid="uid://dib8ayfm76lst" path="res://Scripts/Shark.cs" id="1_muqh6"]
+[ext_resource type="Texture2D" uid="uid://cx5jptwmf47if" path="res://Sprites/Shark.png" id="1_xgpbf"]
+[ext_resource type="PackedScene" uid="uid://ucb4ui2w8k34" path="res://Objects/Bubble.tscn" id="2_f7om3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6cq"]
+size = Vector2(150, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75obe"]
+size = Vector2(1000, 20)
+
+[node name="Shark" type="CharacterBody2D" unique_id=1489791441]
+collision_layer = 4
+script = ExtResource("1_muqh6")
+bubbleScene = ExtResource("2_f7om3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1621022620]
+texture = ExtResource("1_xgpbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=941077022]
+shape = SubResource("RectangleShape2D_bv6cq")
+
+[node name="Laser" type="Area2D" parent="." unique_id=1807155057]
+position = Vector2(-75, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laser" unique_id=551661986]
+position = Vector2(-501, 0)
+shape = SubResource("RectangleShape2D_75obe")
+
+[node name="ColorRect" type="ColorRect" parent="Laser" unique_id=1481584320]
+offset_left = -1000.0
+offset_top = -10.0
+offset_bottom = 10.0
+color = Color(0.019607844, 0.047058824, 0.93333334, 1)
